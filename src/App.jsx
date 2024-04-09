@@ -1,7 +1,9 @@
+import Section from './components/Section';
+
 function App() {
   return (
     <>
-      <h1>test</h1>
+      <Section />
     </>
   );
 }
