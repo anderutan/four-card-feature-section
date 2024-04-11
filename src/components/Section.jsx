@@ -10,27 +10,27 @@ export default function Section() {
       title: 'Supervisor',
       description: 'Monitors activity to identify project roadblocks',
       img: iconSupervisor,
-      color: 'cyan',
+      color: 'border-cyan-400',
     },
     {
       title: 'Team Builder',
       description:
         'Scans our talent network to create the optimal team for your project',
       img: iconTeamBuilder,
-      color: 'red',
+      color: 'border-red-400',
     },
     {
       title: 'Karma',
       description: 'Regularly evaluates our talent to ensure quality',
       img: iconKarma,
-      color: 'orange',
+      color: 'border-orange-400',
     },
     {
       title: 'Calculator',
       description:
         'Uses data from past projects to provide better delivery estimates',
       img: iconCalculator,
-      color: 'blue',
+      color: 'border-blue-400',
     },
   ];
   return (
@@ -43,8 +43,8 @@ export default function Section() {
         Our Artificial Intelligence powered tools use millions of project data
         points to ensure that your project is successful
       </p>
-      {cardInfo.map((info) => (
-        <Card {...info} />
+      {cardInfo.map((info, index) => (
+        <Card {...info} key={index} />
       ))}
     </div>
   );
