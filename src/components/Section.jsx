@@ -34,7 +34,7 @@ export default function Section() {
     },
   ];
   return (
-    <div className='px-10 py-16'>
+    <div className='px-10 py-16 max-w-7xl'>
       <h1 className='text-2xl text-center mb-6 font-extralight tracking-wide'>
         Reliable, efficient delivery{' '}
         <span className='font-semibold'>Powered by Technology</span>
@@ -43,9 +43,24 @@ export default function Section() {
         Our Artificial Intelligence powered tools use millions of project data
         points to ensure that your project is successful
       </p>
-      {cardInfo.map((info, index) => (
-        <Card {...info} key={index} />
-      ))}
+      <div className='md:grid md:grid-cols-3 md:grid-rows-4 md:gap-8 flex flex-col items-center'>
+        <Card
+          {...cardInfo[0]}
+          css={'md:col-start-1 md:row-start-2 md:row-end-4'}
+        />
+        <Card
+          {...cardInfo[1]}
+          css={'md:col-start-2 md:row-start-1 md:row-end-3'}
+        />
+        <Card
+          {...cardInfo[2]}
+          css={'md:col-start-2 md:row-start-3 md:row-end-5'}
+        />
+        <Card
+          {...cardInfo[3]}
+          css={'md:col-start-3 md:row-start-2 md:row-end-4'}
+        />
+      </div>
     </div>
   );
 }
